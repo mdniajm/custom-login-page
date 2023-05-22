@@ -34,6 +34,18 @@ function clwp_ogin_enqueue_register(){
 }
 add_action('login_enqueue_scripts','clwp_ogin_enqueue_register');
 
+// Changing Login form logo
+function clwp_login_logo_change(){
+    ?>
+    <style>
+        #login h1 a, .login h1 a{
+            background-image: url(<?php print plugin_dir_url( __FILE__ ) . '/img/logo-sm.png'; ?>);
+        }
+    </style>
+    <?php
+}
+add_action('login_enqueue_scripts','clwp_login_logo_change');
+
 
 
 
