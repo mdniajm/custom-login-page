@@ -46,7 +46,11 @@ function clwp_login_logo_change(){
 }
 add_action('login_enqueue_scripts','clwp_login_logo_change');
 
-
+// Changing Login form logo url
+function clpwp_login_logo_url_change(){
+    return home_url();
+  }
+  add_filter( 'login_headerurl', 'clpwp_login_logo_url_change');
 
 
 ?>
